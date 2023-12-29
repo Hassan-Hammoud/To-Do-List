@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+@media (min-width: 991px) {
+  .container {
+    width: 500px;
+  }
+}
+
+.form {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.form .input {
+  padding: 10px;
+  flex: 1;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.form .input:focus,
+.add:focus {
+  outline: none;
+}
+
+.form .add {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    justify-content: space-around;
+  }
+
+  .form .add {
+    font-size: 15px;
+    padding: 13px;
+  }
+}
+
+.tasks {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.tasks .task {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.tasks .task.done {
+  opacity: 0.5;
+}
+
+.tasks .task span {
+  font-weight: bold;
+  /* font-size: 10px; */
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
