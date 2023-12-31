@@ -175,6 +175,8 @@ animation: move-wave 3s;
 
 .tasks .task.done {
   opacity: 0.5;
+  background-color:#86377b;
+  color: white;
 }
 
 .tasks .task span {
