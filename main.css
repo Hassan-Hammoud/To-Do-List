@@ -5,11 +5,18 @@ body {
 
 .container {
   margin: 20px auto;
+
 }
 
-@media (min-width: 991px) {
+@media (min-width: 768px) {
   .container {
-    width: 500px;
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
   }
 }
 
@@ -21,14 +28,18 @@ body {
   border-radius: 6px;
 }
 
+
+
 .form .input {
   padding: 10px;
   flex: 1;
+  width: 100%;
   border-radius: 6px;
   border: 1px solid #ddd;
   margin-right: 10px;
   font-size: 20px;
 }
+
 
 .form .input:focus,
 .add:focus {
@@ -36,13 +47,15 @@ body {
 }
 
 .form .add {
-  padding: 10px 15px;
+  padding: 11px 15px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
   background-color: #f44336;
   color: white;
   font-size: 20px;
+  font-weight:bold ;
+
 }
 
 @media (max-width: 768px) {
@@ -51,8 +64,8 @@ body {
   }
 
   .form .add {
-    font-size: 15px;
-    padding: 13px;
+    font-size: 18px;
+    padding: 11px;
   }
 }
 
@@ -90,10 +103,18 @@ body {
 
 .tasks .task span {
   font-weight: bold;
-  /* font-size: 10px; */
+  font-size: 20px;
   background-color: red;
   color: white;
-  padding: 2px 6px;
+  padding: 4px 8px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .tasks .task span {
+    font-size: 16px;
+    padding: 3px 6px;
+  }
 }
