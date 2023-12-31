@@ -3,6 +3,82 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+
+/* Start Animation  */
+
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+/* End Animation  */
+
 .container {
   margin: 20px auto;
 
@@ -51,7 +127,7 @@ body {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  background-color: #f44336;
+  background-color: #86377b;
   color: white;
   font-size: 20px;
   font-weight:bold ;
@@ -103,10 +179,10 @@ body {
 
 .tasks .task span {
   font-weight: bold;
-  font-size: 20px;
-  background-color: red;
+  font-size: 18px;
+  background-color: #86377b;
   color: white;
-  padding: 4px 8px;
+  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
