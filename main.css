@@ -172,7 +172,7 @@ animation: move-wave 3s;
 .tasks .task:not(:last-child) {
   margin-bottom: 15px;
 }
-
+/* Done  */
 .tasks .task.done {
   opacity: 0.5;
   background-color:#86377b;
@@ -187,6 +187,11 @@ animation: move-wave 3s;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.tasks .task.done span {
+  border: 1px solid #ccc;
+
 }
 
 
